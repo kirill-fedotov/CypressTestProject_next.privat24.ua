@@ -1,0 +1,15 @@
+{
+  "mainPage": "https://next.privat24.ua/?lang=en",
+  "topUpMobilePage": "https://next.privat24.ua/mobile?lang=en",
+  "phoneNumber": "686979712",
+  "amount": "1",
+  "cardNumber": "4552 3314 4813 8217",
+  "expDate": "0524",
+  "cvv": "111",
+  "name": "Shayne",
+  "surname": "McConnell",
+  "debitCard": "4552 **** **** 8217",
+  "debitAmount": "1",
+  "debitComission": "2",
+  "paymentCurrency": "UAH"
+}

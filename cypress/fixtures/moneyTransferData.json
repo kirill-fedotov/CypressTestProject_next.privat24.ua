@@ -1,0 +1,20 @@
+{
+  "mainPage": "https://next.privat24.ua/?lang=en",
+  "moneyTransferPage": "https://next.privat24.ua/money-transfer/card?lang=en",
+  "receiverName": "Juliana",
+  "receiverSurname": "Janssen",
+  "comment": "Cypress test",
+  "debitCard": "4552 3314 4813 8217",
+  "receiverCard": "5309 2330 3476 5085",
+  "debitAmount": "500 UAH",
+  "totalAmount": "620.49",
+  "comission": "120.49 UAH",
+  "currency": "UAH",
+  "checkComment": "Cypress test",
+  "cardNumber": "4552 3314 4813 8217",
+  "expDate": "0524",
+  "cvv": "111",
+  "name": "Shayne",
+  "surname": "McConnell",
+  "amount": "500"
+}

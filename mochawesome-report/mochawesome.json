@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-20T16:17:09.619Z",
+    "end": "2022-09-20T16:18:22.618Z",
+    "duration": 72999,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "58f5f01b-8a45-410a-9fcb-2f0d3d1f12af",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test\\pageObject.cy.js",
+      "file": "cypress\\e2e\\test\\pageObject.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Replenishment of Ukraine mobile phone number",
+          "fullTitle": "Replenishment of Ukraine mobile phone number",
+          "timedOut": null,
+          "duration": 34832,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_basePage.basePage.openPage('https://next.privat24.ua/mobile?lang=en');\n_mobileReplenishment.mobileReplenishment.typePhoneNumber('686979712');\n_basePage.basePage.typeAmount('1');\n_basePage.basePage.typeDebitCardData('4552331448138217', '0524', '111');\n_basePage.basePage.typeDebitNameAndSurname('Shayne', 'McConnell');\ncy.wait(3000);\n_basePage.basePage.submitPayment();\n_mobileReplenishment.mobileReplenishment.checkDebitCard('4552 **** **** 8217');\n_mobileReplenishment.mobileReplenishment.checkDebitAmount('1');\n_mobileReplenishment.mobileReplenishment.checkDebitAmountAndComission('2');\n_mobileReplenishment.mobileReplenishment.checkPaymentCurrency('UAH');",
+          "err": {},
+          "uuid": "14343fc3-4130-4f05-b894-bfdffc4e7f8d",
+          "parentUUID": "58f5f01b-8a45-410a-9fcb-2f0d3d1f12af",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Money transfer between foreign cards",
+          "fullTitle": "Money transfer between foreign cards",
+          "timedOut": null,
+          "duration": 33978,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_basePage.basePage.openPage('https://next.privat24.ua/money-transfer/card?lang=en');\n_basePage.basePage.typeDebitCardData('4552331448138217', '0524', '111');\n_basePage.basePage.typeDebitNameAndSurname('Shayne', 'McConnell');\n_transfers.transfers.typeReceiverCard('5309233034765085');\n_basePage.basePage.typeAmount('500');\n_transfers.transfers.typeReceiverNameAndSurname('Juliana', 'Janssen');\n_transfers.transfers.typeComment('Cypress test');\ncy.wait(3000);\n_basePage.basePage.submitPaymentButton();\n_transfers.transfers.checkDebitAndReceiverCards('4552 3314 4813 8217', '5309 2330 3476 5085');\n_transfers.transfers.checkDebitAmountAndTotalAmount('500 UAH', '620.07');\n_transfers.transfers.checkDebitComission('120.07 UAH');\n_transfers.transfers.checkTotalCurrency('UAH');\n_transfers.transfers.checkComment('Cypress test');",
+          "err": {},
+          "uuid": "b6b1571f-05d5-4107-9743-ebca8a7c5d32",
+          "parentUUID": "58f5f01b-8a45-410a-9fcb-2f0d3d1f12af",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "14343fc3-4130-4f05-b894-bfdffc4e7f8d",
+        "b6b1571f-05d5-4107-9743-ebca8a7c5d32"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 68810,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
