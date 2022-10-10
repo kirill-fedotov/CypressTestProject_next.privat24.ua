@@ -5,7 +5,7 @@
 
 # User-specific files
 1-getting-started/
-2-advanced-examples/
+e2e/2-advanced-examples/
 *.rsuser
 *.suo
 *.user
