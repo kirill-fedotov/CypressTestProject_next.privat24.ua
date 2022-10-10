@@ -64,23 +64,25 @@ export class BasePage {
 	}
 
 
-	clickOnLinckAppleStoreAndAssertUrl(linkToApple) {
+	clickOnLinckAppleStoreAndAssertPage(linkToApple) {
 		cy.get('a[title = "Apple store"]')
 			.invoke('removeAttr', 'target')
 			.click()
 		cy.url().should('eq', linkToApple)
+		cy.get('.product-header__identity > .link').should('contain.text', "PrivatBank")
 	}
 
 
-	clickOnLinckGooglePlayAndAssertUrl(linkToGoogle) {
+	clickOnLinckGooglePlayAndAssertPage(linkToGoogle) {
 		cy.get('a[title = "Google Play"]')
 			.invoke('removeAttr', 'target')
 			.click()
 		cy.url().should('eq', linkToGoogle)
+		cy.get('.Vbfug > a > span').should('contain.text', "JSC CB PrivatBank")
 	}
 
 
-	clickOnLinckAppGalleryAndAssertUrl(linkToAppGallery) {
+	clickOnLinckAppGalleryAndAssertPage(linkToAppGallery) {
 		cy.get('a[title = "AppGallery"]')
 			.invoke('removeAttr', 'target')
 			.click()

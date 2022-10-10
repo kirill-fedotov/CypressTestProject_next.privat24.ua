@@ -123,7 +123,7 @@ describe('Cypress Tests', () => {
 
 	})
 
-	it.only('Working with Exchange Rates Page', () => {
+	it('Working with Exchange Rates Page', () => {
 		cy.fixture('exchangeRatesData').then((data) => {
 			basePage.openPage(data.mainPage)
 			exchangeRatesPage.clickOnExchangeRates()
@@ -136,21 +136,21 @@ describe('Cypress Tests', () => {
 	it('Working with Link to Apple Store', () => {
 		cy.fixture('linksToAppleGoogleAppgallery').then((data) => {
 			basePage.openPage(data.mainPage)
-			basePage.clickOnLinckAppleStoreAndAssertUrl(data.appleStorePage)
+			basePage.clickOnLinckAppleStoreAndAssertPage(data.appleStorePage)
 		})
 	})
 
 	it('Working with Link to Google Play', () => {
 		cy.fixture('linksToAppleGoogleAppgallery').then((data) => {
 			basePage.openPage(data.mainPage)
-			basePage.clickOnLinckGooglePlayAndAssertUrl(data.googlePlayPage)
+			basePage.clickOnLinckGooglePlayAndAssertPage(data.googlePlayPage)
 		})
 	})
 
 	it('Working with Link to App Gallery', () => {
 		cy.fixture('linksToAppleGoogleAppgallery').then((data) => {
 			basePage.openPage(data.mainPage)
-			basePage.clickOnLinckAppGalleryAndAssertUrl(data.appGalleryPage)
+			basePage.clickOnLinckAppGalleryAndAssertPage(data.appGalleryPage)
 		})
 	})
 	

@@ -4,6 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
+1-getting-started/
+2-advanced-examples/
 *.rsuser
 *.suo
 *.user
