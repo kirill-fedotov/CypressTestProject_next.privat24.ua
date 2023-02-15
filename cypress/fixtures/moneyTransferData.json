@@ -1,6 +1,6 @@
 {
-  "mainPage": "https://next.privat24.ua/?lang=en",
-  "moneyTransferPage": "https://next.privat24.ua/money-transfer/card?lang=en",
+  "mainPage": "https://next.privat24.ua/",
+  "moneyTransferPage": "https://next.privat24.ua/money-transfer/card",
   "receiverName": "Juliana",
   "receiverSurname": "Janssen",
   "comment": "Cypress test",
@@ -12,7 +12,7 @@
   "currency": "UAH",
   "checkComment": "Cypress test",
   "cardNumber": "4552 3314 4813 8217",
-  "expDate": "0524",
+  "expDate": "11235",
   "cvv": "111",
   "name": "Shayne",
   "surname": "McConnell",

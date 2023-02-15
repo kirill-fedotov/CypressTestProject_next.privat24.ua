@@ -2,7 +2,7 @@ export class SearchQuery {
 
 	
 	clickSearchButtonAndTypeTransferToCard() {
-		cy.get("div[class= 'sideA_cakTArHgwR'] div[class= 'sc-EHOje fIXSYP']")
+		cy.get("header > div:first-of-type > div:first-of-type > div:first-of-type > div:first-of-type > div:first-of-type")
 			.click()
 		cy.get("input[data-qa-node='query']")
 			.invoke('attr', 'placeholder')
@@ -16,7 +16,7 @@ export class SearchQuery {
 	}
 
 	clickSearchButtonAndTypeMobileTopUp() {
-		cy.get("div[class= 'sideA_cakTArHgwR'] div[class= 'sc-EHOje fIXSYP']")
+		cy.get("header > div:first-of-type > div:first-of-type > div:first-of-type > div:first-of-type > div:first-of-type")
 			.click()
 		cy.get("input[data-qa-node='query']")
 			.invoke('attr', 'placeholder')
@@ -30,7 +30,7 @@ export class SearchQuery {
 	}
 
 	clickSearchButtonAndTypeDeposits() {
-		cy.get("div[class= 'sideA_cakTArHgwR'] div[class= 'sc-EHOje fIXSYP']")
+		cy.get("header > div:first-of-type > div:first-of-type > div:first-of-type > div:first-of-type > div:first-of-type")
 			.click()
 		cy.get("input[data-qa-node='query']")
 			.invoke('attr', 'placeholder')

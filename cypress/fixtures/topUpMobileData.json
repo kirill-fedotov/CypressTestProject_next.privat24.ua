@@ -1,6 +1,6 @@
 {
-  "mainPage": "https://next.privat24.ua/?lang=en",
-  "topUpMobilePage": "https://next.privat24.ua/mobile?lang=en",
+  "mainPage": "https://next.privat24.ua",
+  "topUpMobilePage": "https://next.privat24.ua/mobile",
   "phoneNumber": "686979712",
   "amount": "1",
   "cardNumber": "4552 3314 4813 8217",

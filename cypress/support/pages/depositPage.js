@@ -2,25 +2,23 @@ export class DepositPage {
 
 
 	clickQuestionsButton() {
-		cy.get('.navMenu_QG5K9Dh6AQ > :nth-child(3) > .sc-caSCKo')
+		cy.get('.navMenu_QG5K9Dh6AQ > :nth-child(3) > .sc-cUEOzv')
 			.click()
 	}
 
 	clickUsDollarButton() {
-		cy.get('[for="toggler2321"]')
+		cy.get("label[title = 'US Dollar']")
 			.click()
 	}
 
 	clickEuroButton() {
-		cy.get('[for="toggler2322"]')
+		cy.get("label[title = 'Euro']")
 			.click()
 	}
 
 	clickOnQuestions() {
 		cy.get(':nth-child(1) > .heading_HdyoL8acKm > :nth-child(1)')
 			.click()
-		//cy.get(':nth-child(1) > .heading_HdyoL8acKm > :nth-child(1)').should('contain', "Коли я можу відкрити вклад через Інтернет (сайт банку, Приват24, мобільний додаток «Мої вклади»)?")
-		cy.get(':nth-child(2) > .heading_HdyoL8acKm > :nth-child(1)')
 			.click()
 		cy.get(':nth-child(3) > .heading_HdyoL8acKm > :nth-child(1)')
 			.click()

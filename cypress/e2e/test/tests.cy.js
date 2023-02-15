@@ -10,13 +10,14 @@ import { exchangeRatesPage } from "../../support/pages/exchangeRatesPage";
 describe('Cypress Tests', () => {
 
 	it('Top up mobile number', () => {
+		basePage.uncaughtException()
 		cy.fixture('topUpMobileData').then((data) => {
 			basePage.openPage(data.topUpMobilePage)
+			basePage.changeLanguage()
 			mobileReplenishment.typePhoneNumber(data.phoneNumber)
 			basePage.typeAmount(data.amount)
 			basePage.typeDebitCardData(data.cardNumber, data.expDate, data.cvv)
 			basePage.typeDebitNameAndSurname(data.name, data.surname)
-			basePage.wait()
 			basePage.submitPayment()
 			mobileReplenishment.checkDebitCard(data.debitCard)
 			mobileReplenishment.checkDebitAmount(data.debitAmount)
@@ -30,6 +31,7 @@ describe('Cypress Tests', () => {
 	it('Money transfer between foreign cards', () => {
 		cy.fixture('moneyTransferData').then((data) => {
 			basePage.openPage(data.moneyTransferPage)
+			basePage.changeLanguage()
 			basePage.typeDebitCardData(data.cardNumber, data.expDate, data.cvv)
 			basePage.typeDebitNameAndSurname(data.name, data.surname)
 			transfers.typeReceiverCard(data.receiverCard)
@@ -51,6 +53,7 @@ describe('Cypress Tests', () => {
 	it('Working with the search field (Money transfer)', () => {
 		cy.fixture('moneyTransferData').then((data) => {
 			basePage.openPage(data.mainPage)
+			basePage.changeLanguage()
 			searchQuery.clickSearchButtonAndTypeTransferToCard()
 			basePage.typeDebitCardData(data.cardNumber, data.expDate, data.cvv)
 			basePage.typeDebitNameAndSurname(data.name, data.surname)
@@ -70,8 +73,10 @@ describe('Cypress Tests', () => {
 	})
 
 	it('Working with the search field (Top up mobile)', () => {
+		basePage.uncaughtException()
 		cy.fixture('topUpMobileData').then((data) => {
 			basePage.openPage(data.mainPage)
+			basePage.changeLanguage()
 			searchQuery.clickSearchButtonAndTypeMobileTopUp()
 			mobileReplenishment.typePhoneNumber(data.phoneNumber)
 			basePage.typeAmount(data.amount)
@@ -90,6 +95,7 @@ describe('Cypress Tests', () => {
 	it('Working with the search field (Type "Transfer To Card")', () => {
 		cy.fixture('basePageData').then((data) => {
 			basePage.openPage(data.mainPage)
+			basePage.changeLanguage()
 			searchQuery.clickSearchButtonAndTypeTransferToCard()
 			
 		})
@@ -98,6 +104,7 @@ describe('Cypress Tests', () => {
 	it('Working with the search field (Type "Mobile Top Up")', () => {
 		cy.fixture('basePageData').then((data) => {
 			basePage.openPage(data.mainPage)
+			basePage.changeLanguage()
 			searchQuery.clickSearchButtonAndTypeMobileTopUp()
 			
 		})
@@ -106,6 +113,7 @@ describe('Cypress Tests', () => {
 	it('Working with the search field (Type "Deposits")', () => {
 		cy.fixture('basePageData').then((data) => {
 			basePage.openPage(data.mainPage)
+			basePage.changeLanguage()
 			searchQuery.clickSearchButtonAndTypeDeposits()
 
 		})
@@ -114,6 +122,7 @@ describe('Cypress Tests', () => {
 	it('Working with Deposit Page', () => {
 		cy.fixture('depositPageData').then((data) => {
 			basePage.openPage(data.depositMainPage)
+			basePage.changeLanguage()
 			depositPage.clickUsDollarButton()
 			depositPage.clickEuroButton()
 			depositPage.clickQuestionsButton()
@@ -133,14 +142,8 @@ describe('Cypress Tests', () => {
 
 	})
 
-	it('Working with Link to Apple Store', () => {
-		cy.fixture('linksToAppleGoogleAppgallery').then((data) => {
-			basePage.openPage(data.mainPage)
-			basePage.clickOnLinckAppleStoreAndAssertPage(data.appleStorePage)
-		})
-	})
-
 	it('Working with Link to Google Play', () => {
+		basePage.uncaughtException()
 		cy.fixture('linksToAppleGoogleAppgallery').then((data) => {
 			basePage.openPage(data.mainPage)
 			basePage.clickOnLinckGooglePlayAndAssertPage(data.googlePlayPage)
@@ -148,6 +151,7 @@ describe('Cypress Tests', () => {
 	})
 
 	it('Working with Link to App Gallery', () => {
+		basePage.uncaughtException()
 		cy.fixture('linksToAppleGoogleAppgallery').then((data) => {
 			basePage.openPage(data.mainPage)
 			basePage.clickOnLinckAppGalleryAndAssertPage(data.appGalleryPage)

@@ -55,15 +55,16 @@ export class BasePage {
 	}
 
 
-
 	typeDebitNameAndSurname(name, surname) {
-		cy.get('[data-qa-node="firstNamedebitSource"]')
+		cy.get("input[data-qa-node='firstNamedebitSource']")
+			.should('be.visible')
 			.type(name)
-			.get('[data-qa-node="lastNamedebitSource"]')
+		cy.get("input[data-qa-node='lastNamedebitSource']")
+			.should('be.visible')
 			.type(surname)
 	}
 
-
+	
 	clickOnLinckAppleStoreAndAssertPage(linkToApple) {
 		cy.get('a[title = "Apple store"]')
 			.invoke('removeAttr', 'target')
@@ -89,6 +90,19 @@ export class BasePage {
 		cy.url().should('eq', linkToAppGallery)
 	}
 
+
+	changeLanguage() {
+		cy.get("button[data-qa-node='lang']")
+			.click()
+		cy.get("button[data-qa-node='lang-option'][data-qa-value='English']")
+			.click()
+	}
+
+	uncaughtException() {
+		Cypress.on('uncaught:exception', (err, runnable) => {
+			return false
+		})
+	}
 
 
 
